@@ -61,12 +61,12 @@ This implementation tries to produce generally better and more consistent result
 </p>
 </td>
 </tr>
-<tr>
+<tr></tr><tr>
 <th>try-catch</th>
 <td>"ArgumentException"</td>
 <td>"ArgumentException"</td>
 </tr>
-<tr>
+<tr></tr><tr>
 <th>
 
 exception   
@@ -128,7 +128,7 @@ for object obj_exception_test:
 </p>
 </td>
 </tr>
-<tr>
+<tr></tr><tr>
 <th>try-catch</th>
 <td valign="top">
 
@@ -166,7 +166,7 @@ Number of arguments expected 3, got 2"
 ]
 </td>
 </tr>
-<tr>
+<tr></tr><tr>
 <th>
 
 exception   
