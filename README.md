@@ -2,7 +2,7 @@
 
 [![Donate](https://img.shields.io/badge/donate-%E2%9D%A4-blue.svg)](https://musnik.itch.io/donate-me) [![License](https://img.shields.io/github/license/KeeVeeGames/Exception.gml)](#!)
 
-This is a base class for custom exceptions replicating the ыекгсегку of system exceptions and adding better support of [try-catch](https://manual-en.yoyogames.com/GameMaker_Language/GML_Overview/Language_Features/try_catch_finally.htm) and [exception_unhandled_handler](https://manual-en.yoyogames.com/GameMaker_Language/GML_Reference/Debugging/exception_unhandled_handler.htm) for these custom exceptions.
+This is a base class for custom exceptions replicating a structure of system exceptions and adding better support of [try-catch](https://manual-en.yoyogames.com/GameMaker_Language/GML_Overview/Language_Features/try_catch_finally.htm) and [exception_unhandled_handler](https://manual-en.yoyogames.com/GameMaker_Language/GML_Reference/Debugging/exception_unhandled_handler.htm) for these custom exceptions.
 
 The class is generating all the necessary exception fields and populates data for `script`, `line` and `stacktrace` ones. Makes output on error windows nicer and more meaningful on handled exceptions. Also adds better support for YYC.
 
