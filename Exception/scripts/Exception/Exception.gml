@@ -2,7 +2,7 @@ globalvar __YYGMLException_static;
 
 // catch a system runtime exception to get its static struct
 try {
-    var temp = /*#cast*/ "string" + 0;
+    show_error("test", false);
 } catch(exception) {
     __YYGMLException_static = static_get(exception);
 }
@@ -10,10 +10,10 @@ try {
 /// @ignore
 /// @description                        Base class for exceptions
 function Exception() constructor {
-    static_set(self, __YYGMLException_static);      // inherit from system YYGMLException
+    static_set(self, __YYGMLException_static);      // inherit from system YYGMLException	
     
-    message = /*#cast*/ instanceof(self) + "\r\n";       /// @is {string}
-    longMessage = message;                          /// @is {string}
+    message = "";
+    longMessage = "";
     script = "";
     line = -1;
     stacktrace = [];                                /// @is {string[]}
@@ -31,13 +31,31 @@ function Exception() constructor {
             line = real(string_copy(stackline, colonPos + 1, string_length(stackline) - colonPos));
         }
         
-        stackline = string_replace(stackline, ":", " (line : ");
+        stackline = string_replace(stackline, ":", " (line ");
         stackline += ")";
         
         array_push(stacktrace, stackline);
     }
     
-    toString = function() {
-        return message;
+    static toString = function() {
+    	return longMessage;
+    }
+    
+    static init = function() {
+        var exceptionName/*:string*/ = /*#cast*/ instanceof(self);
+        message = string("{0} {1}", exceptionName, message);
+        longMessage = string("{0}\r\n{1}", exceptionName, longMessage);
+        
+        // add more info for YYC as it is not adding standard error output like on VM
+        if (code_is_compiled()) {
+            longMessage = string("Unable to find a handler for exception {0}\r\n", longMessage);
+            
+            for (var i = 0, length = array_length(stacktrace); i < length; i++) {
+                longMessage += "\r\n" + stacktrace[i];
+            }
+        }
+        
+        // fixes for weird constructor inheritance GM bug and YYC shenanigans
+        static_set(self, static_get(Exception));
     }
 }
