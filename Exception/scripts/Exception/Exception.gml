@@ -1,32 +1,42 @@
-/// @class								Exception
-/// @abstarct
+globalvar __YYGMLException_static
+
+try {
+	var temp = "string" + 0;
+} catch(exception) {
+	__YYGMLException_static = static_get(exception);
+}
+
+/// @ignore
 /// @description						Base class for exceptions
 function Exception() constructor {
-	_message = "";
-	callstack = "";
+	static_set(self, __YYGMLException_static);		// inherit from system YYGMLException
 	
-	static toString = function() {
-		return _message;
+	message = instanceof(self) + "\r\n";
+	longMessage = message;
+	script = "";
+	line = -1;
+	stacktrace = [];
+	
+	// TODO: Check callstack format on different target platfroms
+	// TODO: Replace string functions with buffer mutations?
+	var stack = debug_get_callstack();
+	
+	for (var i = 2, length = array_length(stack) - 1; i < length; i++) {
+		var stackline = stack[i];
+		var colonPos = string_pos(":", stackline);
+		
+		if (i == 2) {
+			script = string_copy(stackline, 1, colonPos - 1);
+			line = real(string_copy(stackline, colonPos + 1, string_length(stackline) - colonPos));
+		}
+		
+		stackline = string_replace(stackline, ":", " (line : ");
+		stackline += ")";
+		
+		array_push(stacktrace, stackline);
 	}
-}
-
-// EXAMPLE EXCEPTIONS
-
-/// @class								ArgumentException(expected_number, given_number)
-/// @extends							Exception
-/// @param {real} expected_number		Number of arguments expected for method
-/// @param {real} given_number			Number of arguments provided to method
-/// @description						Exception that is thrown when the number of arguments provided to a method is not valid
-function ArgumentException(expected_number, given_number) : Exception() constructor {
-	_message +=	"ArgumentException:\r\n" + 
-				"Number of arguments expected " + string(expected_number) + ", got " + string(given_number) + ".";
-}
-
-/// @class								NotImplementedException(method_name)
-/// @extends							Exception
-/// @param {string} method_name			Name of the method that is not implemented
-/// @description						Exception that is thrown when a requested method or operation is not implemented
-function NotImplementedException(method_name) : Exception() constructor {
-	_message +=	"NotImplementedException:\r\n" +
-				"Method " + method_name + " is not implemented.";
+	
+	toString = function() {
+		return message;
+	}
 }
