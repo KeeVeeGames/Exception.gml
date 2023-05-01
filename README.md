@@ -43,8 +43,8 @@ This implementation tries to produce generally better and more consistent result
 <thead>
 <tr>
 <th></th>
-<th>VM</th>
-<th width=386px>YYC</th>
+<th width=310px>VM</th>
+<th width=310px>YYC</th>
 </tr>
 </thead>
 <tbody>
@@ -104,8 +104,8 @@ for object obj_exception_test:
 <thead>
 <tr>
 <th></th>
-<th>VM</th>
-<th width=386px>YYC</th>
+<th width=310px>VM</th>
+<th width=310px>YYC</th>
 </tr>
 </thead>
 <tbody>
