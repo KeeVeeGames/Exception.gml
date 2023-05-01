@@ -10,7 +10,7 @@ try {
 /// @ignore
 /// @description                        Base class for exceptions
 function Exception() constructor {
-    static_set(self, __YYGMLException_static);      // inherit from system YYGMLException	
+    static_set(self, __YYGMLException_static);      // inherit from system YYGMLException
     
     message = "";
     longMessage = "";
@@ -38,12 +38,12 @@ function Exception() constructor {
     }
     
     static toString = function() {
-    	return longMessage;
+        return longMessage;
     }
     
     static init = function() {
         var exceptionName/*:string*/ = /*#cast*/ instanceof(self);
-        message = string("{0} {1}", exceptionName, message);
+        message = string("{0}: {1}", exceptionName, message);
         longMessage = string("{0}\r\n{1}", exceptionName, longMessage);
         
         // add more info for YYC as it is not adding standard error output like on VM
