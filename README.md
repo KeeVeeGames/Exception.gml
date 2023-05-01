@@ -43,8 +43,8 @@ This implementation tries to produce generally better and more consistent result
 <thead>
 <tr>
 <th></th>
-<th width=310px>VM</th>
-<th width=310px>YYC</th>
+<th width=360px>VM</th>
+<th width=360px>YYC</th>
 </tr>
 </thead>
 <tbody>
@@ -67,7 +67,13 @@ This implementation tries to produce generally better and more consistent result
 <td>"ArgumentException"</td>
 </tr>
 <tr>
-<th>exception_unhandled_handler</th>
+<th>
+
+exception   
+unhandled   
+handler
+
+</th>
 <td>
 
 `message`: "Unable to find a handler for exception ArgumentException"   
@@ -104,8 +110,8 @@ for object obj_exception_test:
 <thead>
 <tr>
 <th></th>
-<th width=310px>VM</th>
-<th width=310px>YYC</th>
+<th width=360px>VM</th>
+<th width=360px>YYC</th>
 </tr>
 </thead>
 <tbody>
@@ -161,7 +167,13 @@ Number of arguments expected 3, got 2"
 </td>
 </tr>
 <tr>
-<th>exception_unhandled_handler</th>
+<th>
+
+exception   
+unhandled   
+handler
+
+</th>
 <td valign="top">
 
 `message`: "Unable to find a handler for exception ArgumentException   
