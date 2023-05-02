@@ -39,7 +39,7 @@ This implementation tries to produce generally better and more consistent result
 
 ### Simple `throw ("ArgumentException")`
 
-<table style="max-width: max-content;">
+<table>
 <thead>
 <tr>
 <th></th>
@@ -63,8 +63,8 @@ This implementation tries to produce generally better and more consistent result
 </tr>
 <tr></tr><tr>
 <th>try-catch</th>
-<td>"ArgumentException"</td>
-<td>"ArgumentException"</td>
+<td>"ArgumentException"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+<td>"ArgumentException"&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
 </tr>
 <tr></tr><tr>
 <th>
