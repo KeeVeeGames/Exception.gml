@@ -39,7 +39,7 @@ This implementation tries to produce generally better and more consistent result
 
 ### Simple `throw ("ArgumentException")`
 
-<table>
+<table style="max-width: max-content;">
 <thead>
 <tr>
 <th></th>
@@ -57,7 +57,7 @@ This implementation tries to produce generally better and more consistent result
 </td>
 <td>
 <p align="center">
-<a href="https://keevee.games/wp-content/uploads/2023/05/Exception_HlRQBDDjyn.png"><img src="https://keevee.games/wp-content/uploads/2023/05/Exception_HlRQBDDjyn-300x265.png" alt="Error screenshot"</a>
+<a href="https://keevee.games/wp-content/uploads/2023/05/Exception_HlRQBDDjyn.png"><img src="https://keevee.games/wp-content/uploads/2023/05/Exception_HlRQBDDjyn-300x265.png" alt="Error screenshot"></a>
 </p>
 </td>
 </tr>
@@ -124,7 +124,7 @@ for object obj_exception_test:
 </td>
 <td>
 <p align="center">
-<a href="https://keevee.games/wp-content/uploads/2023/05/Exception_5Y51n4jzzy.png"><img src="https://keevee.games/wp-content/uploads/2023/05/Exception_5Y51n4jzzy-300x265.png" alt="Error screenshot"</a>
+<a href="https://keevee.games/wp-content/uploads/2023/05/Exception_5Y51n4jzzy.png"><img src="https://keevee.games/wp-content/uploads/2023/05/Exception_5Y51n4jzzy-300x265.png" alt="Error screenshot"></a>
 </p>
 </td>
 </tr>
