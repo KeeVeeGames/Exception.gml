@@ -31,7 +31,7 @@ function ArgumentException(expected_number, given_number) : Exception() construc
 Copy the [Exception script](https://github.com/KeeVeeGames/Exception.gml/blob/master/Exception/scripts/Exception/Exception.gml) into your project.   
 Or get the latest asset package from the [releases page](../../releases) and import it into IDE.
 
-## Comparison
+## Comparison:
 
 In GameMaker there are differences in error message appearance and exception data between different handling methods (try-catch or exception_unhandled_handler) and compile targets (VM or YYC).
 
