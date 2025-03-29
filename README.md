@@ -37,7 +37,7 @@ In GameMaker there are differences in error message appearance and exception dat
 
 This implementation tries to produce generally better and more consistent results in comparison to its alternatives.
 
-### Simple `throw ("ArgumentException")`
+### Built-in `throw "ArgumentException"`
 
 <table>
 <thead>
