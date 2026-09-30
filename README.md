@@ -1,6 +1,6 @@
 # GameMaker Exception Base Class
 
-[![Donate](https://img.shields.io/badge/donate-%E2%9D%A4-blue.svg)](https://musnik.itch.io/donate-me) [![License](https://img.shields.io/github/license/KeeVeeGames/Exception.gml)](#!)
+[![Donate](https://img.shields.io/badge/donate-%E2%9D%A4-blue.svg)](https://musnik.itch.io/donate) [![License](https://img.shields.io/github/license/KeeVeeGames/Exception.gml)](#!)
 
 This is a base class for custom exceptions. It replicates a structure of system exceptions and adding better support of [try-catch](https://manual-en.yoyogames.com/GameMaker_Language/GML_Overview/Language_Features/try_catch_finally.htm) and [exception_unhandled_handler](https://manual-en.yoyogames.com/GameMaker_Language/GML_Reference/Debugging/exception_unhandled_handler.htm) for these custom exceptions.
 
